@@ -33,7 +33,7 @@ class InlineValidator extends ConstraintValidator
     /**
      * {@inheritDoc}
      */
-    public function isValid($value, Constraint $constraint)
+    public function validate($value, Constraint $constraint)
     {
         $errorElement = new ErrorElement(
             $value,
@@ -57,5 +57,13 @@ class InlineValidator extends ConstraintValidator
         call_user_func($function, $errorElement, $value);
 
         return true;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function isValid($value, Constraint $constraint)
+    {
+        return $this->validate($value, $constraint);
     }
 }

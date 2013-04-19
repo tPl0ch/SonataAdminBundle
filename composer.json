@@ -46,7 +46,7 @@
     "target-dir": "Sonata/AdminBundle",
     "extra": {
         "branch-alias": {
-            "dev-master": "2.2.x-dev"
+            "dev-hotfix/cosntraint-validator-deprecated": "2.2.x-dev"
         }
     }
 }
